@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Master list</title>
+</head>
+<body>
+    <h2>All masters</h2>
+    <table>
+        <thead>
+        <tr>
+            <th width="300px">First name</th>
+            <th width="300px">Last name</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="master : ${masters}">
+            <td th:text="${master.firstName}">Ivan</td>
+            <td th:text="${master.lastName}">Ivanov</td>
+        </tr>
+        </tbody>
+    </table>
+</body>
+</html>

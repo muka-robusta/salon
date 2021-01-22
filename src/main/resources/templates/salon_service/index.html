@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Master list</title>
+</head>
+<body>
+<h2>Price list</h2>
+<table>
+    <thead>
+    <tr>
+        <th width="100px">Name</th>
+        <th width="400px">Description</th>
+        <th width="100px">Price</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="service_element : ${service_list}">
+        <td th:text="${service_element.name}">Name</td>
+        <td th:text="${service_element.description}">Description</td>
+        <td th:text="${service_element.price}">Price</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
