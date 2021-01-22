@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="../common/css/materialize.min.css"  media="screen,projection"/>
+    <link rel="stylesheet" href="../common/css/main.css">
+</head>
+<body>
+
+<div class="content_area">
+    <div class="row">
+        <div class="card_width_login_register">
+            <div class="card">
+                <div class="card-content">
+                    <span class="card-title">Registration</span>
+                    <div class="row">
+                        <form>
+
+                            <div class="input-field">
+                                <i class="material-icons prefix">account_circle</i>
+                                <input id="first_name" type="text" class="validate">
+                                <label for="first_name">First Name</label>
+                            </div>
+                            <div class="input-field">
+                                <input id="last_name" type="text" class="validate">
+                                <label for="last_name">Last Name</label>
+                            </div>
+
+                            <div class="input-field">
+                                <i class="material-icons prefix">fingerprint</i>
+                                <input id="password" type="password" class="validate">
+                                <label for="password">Password</label>
+                            </div>
+
+                            <div class="input-field">
+                                <i class="material-icons prefix">alternate_email</i>
+                                <input id="email" type="email" class="validate">
+                                <label for="email">Email</label>
+                            </div>
+
+                            <div class="input-field">
+                                <i class="material-icons prefix">phone</i>
+                                <input id="phone" type="text" data-length="13" class="validate">
+                                <label for="phone">Phone number</label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="card-action">
+                    <a href="#" class="btn waves-effect waves-light">Complete registration
+                    </a>
+                    <a href="#" class="btn-flat waves-effect waves-light">Cancel</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="../common/js/materialize.min.js"></script>
+</body>
+</html>
