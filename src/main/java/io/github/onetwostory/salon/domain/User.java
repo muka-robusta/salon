@@ -3,24 +3,26 @@ package io.github.onetwostory.salon.domain;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Lob;
+import javax.persistence.MappedSuperclass;
 
 @Getter
 @Setter
-@Entity
-public class User {
+@MappedSuperclass
+public class User extends BaseEntity {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
+    @Column(name = "first_name")
     private String firstName;
-    private String lastName;
-    private String email;
-    private String hashedPassword;
 
-    @Enumerated(value = EnumType.STRING)
-    private Role role;
+    @Column(name = "last_name")
+    private String lastName;
+
+    @Column(name = "email")
+    private String email;
+
+    @Column(name = "password_hash")
+    private String hashedPassword;
 
     @Lob
     private Byte[] image;
