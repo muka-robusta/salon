@@ -26,7 +26,10 @@ public class Appointment extends BaseEntity {
     @JoinColumn(name = "master_id")
     private Master master;
 
-    @OneToMany
+    @ManyToMany
+    @JoinTable(name = "service_appointment",
+            joinColumns = @JoinColumn(name = "appointment_id"),
+            inverseJoinColumns = @JoinColumn(name = "service_option_id"))
     private List<ServiceOption> serviceOptionList;
 
     @OneToOne(cascade = CascadeType.ALL)
