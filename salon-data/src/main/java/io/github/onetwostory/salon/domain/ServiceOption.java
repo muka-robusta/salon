@@ -16,4 +16,7 @@ public class ServiceOption extends BaseEntity {
 
     @ManyToMany(mappedBy = "serviceOptionList")
     private List<Appointment> appointments;
+
+    @ManyToMany(mappedBy = "serviceOptionList")
+    private List<Appointment> appointments;
 }
